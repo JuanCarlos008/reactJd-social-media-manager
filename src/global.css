@@ -1,0 +1,122 @@
+*{
+    margin: 0;
+    padding: 0;
+  }
+
+  :root{
+    --lime-green: hsl(163, 72%, 41%);
+    --bright-red: hsl(356, 69%, 56%);
+  
+    --facebook: #3b5998;
+    --twitter: #55acee;
+    --instagram: linear-gradient(to right, hsl(37, 97%, 70%) 0%, hsl(329, 70%, 58%) 100%);
+    --youtube: #ff0000;
+  
+    --gray: #5f616d;
+    --gray-2: #9b9ea7;
+  
+    --header-color: #f8f9fe;
+    --card-color: #f0f3fa;
+    --bgcolor: #fff;
+    --textcolor: #222;
+    --switchcolor: linear-gradient(to right, #4796d2 0%, #37ce8f 100%)
+  }
+  
+  body{
+    font-family: 'Inter', sans-serif;
+  }
+
+  main{
+    color: var(--textcolor);
+    background-color: var(--bgcolor);
+  }
+
+  .grid{
+    display: grid;
+    gap: 15px 0;
+  }
+
+  .wrapper{
+    padding: 0 30px;
+    max-width: 1340px;
+  }
+
+
+
+  /*************Media Querys*************/
+
+  @media screen and (min-width: 480px){
+    .wrapper{
+        margin: auto;
+    }
+    
+    .grid{
+        grid-template-columns: repeat(2, 1fr);
+        gap: 25px
+    }
+  }
+  
+  @media screen and (min-width: 768px){
+    .grid{
+        grid-template-columns: repeat(3, 1fr)
+    }
+  
+    .dark-mode{
+        justify-content: flex-end;
+    }
+  
+    .dark-mode-title{
+        display: inline-block;
+        padding: 10px 20px 0 0;
+    }
+    .header .wrapper{
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 50px;
+        align-items: center;
+    }
+  
+    .brand{
+        border-bottom: none !important;
+    }
+  }
+  
+  @media screen and (min-width: 1024px){
+    .grid{
+        grid-template-columns: repeat(4, 1fr)
+    }
+  
+  }
+
+
+
+  /*-----------------Dark Mode------------*/
+
+
+  .dark-mode-theme{
+    --card-color: #252b43;
+    --gray: #8088ad;
+    --header-color: #22262f;
+    --bgcolor: #1d2029;
+    --textcolor: #fff;
+    --switchcolor: linear-gradient(to right, #4796d2 0%, #37ce8f 100%)
+  }
+  
+  .light-mode-theme{
+    --header-color: #f8f9fe;
+    --card-color: #f0f3fa;
+    --bgcolor: #fff;
+    --textcolor: #222;
+  
+  }
+  
+  @media (prefers-color-scheme: dark){
+    :root{
+        --card-color: #252b43;
+        --gray: #8088ad;
+        --header-color: #22262f;
+        --bgcolor: #1d2029;
+        --textcolor: #fff;
+        --switchcolor: linear-gradient(to right, #4796d2 0%, #37ce8f 100%)
+    }
+  }

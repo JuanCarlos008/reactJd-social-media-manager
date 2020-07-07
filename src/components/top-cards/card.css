@@ -1,0 +1,76 @@
+.card{
+/*     display: none; */
+  position: relative;
+  border-radius: 5px;
+  overflow: hidden;
+  background-color: var(--card-color);
+  text-align: center;
+  padding: 35px 0;
+}
+
+.card::before{
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: block;
+  height: 4px;
+
+}
+
+
+.card-title{
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* border: 1px solid purple; */
+  color: var(--gray);
+  font-size: .9em;
+  font-weight: bold;
+}
+
+.card-title img{
+  margin-right: 5px;
+}
+
+.card-followers{
+  /* border: 1px solid blue; */
+}
+
+.card-followers-number{
+  /* border: 1px solid red; */
+  font-size: 50px;
+  font-weight: 700;
+  display: inline-block;
+  margin-bottom: 5px;
+}
+
+.card-followers-title{
+  /* border: 1px solid green; */
+  display: block;
+  font-weight: 300;
+  text-transform: uppercase;
+  color: var(--gray-2);
+  font-size: .75em;
+  letter-spacing: 4px;
+}
+
+.card-today{
+  margin-top: 20px;
+  color: var(--lime-green);
+  font-size: .7em;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card-today img{
+  margin-right: 5px;
+}
+
+.card-today img[src*="/img/icon-down.svg"] ~ span{
+  color: var(--bright-red)
+}

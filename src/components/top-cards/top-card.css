@@ -1,0 +1,19 @@
+.top-cards{
+    margin-top: -75px;
+  }
+  
+  .card.facebook::before{
+    background-color: var(--facebook);
+  }
+  
+  .card.twitter::before{
+    background-color: var(--twitter);
+  }
+  
+  .card.instagram::before{
+    background: var(--instagram)
+  }
+  
+  .card.youtube::before{
+    background-color: var(--youtube);
+  }
